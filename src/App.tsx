@@ -1,16 +1,15 @@
-import Slider from "@mui/material/Slider";
+import { Header } from "./components/Header";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <div>
-        <Slider defaultValue={30} />
-        <Slider
-          defaultValue={30}
-          className="text-teal-600"
-          slotProps={{ thumb: { className: "rounded-sm" } }}
-        />
+      <div className=" mx-auto max-w-md bg-[#F7F9FB]">
+        <Header />
+        <div className=" h-[600vh] px-7 pt-5">
+          <h1 className="text-xl font-semibold text-[#304985] ">
+            ¡Bienvenido, Sam!
+          </h1>
+        </div>
       </div>
     </>
   );
