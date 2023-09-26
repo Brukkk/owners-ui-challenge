@@ -15,7 +15,7 @@ export const Header = () => {
           slotProps={{
             badge: {
               className:
-                "h-3 w-3 bottom-2 right-1 min-w-0 content-between  bg-[#BD2020] p-0.5 text-[8px] leading-tight text-white",
+                "h-3 w-3 bottom-2 right-1 min-w-0  bg-[#BD2020] p-0.5 text-[8px] leading-tight text-white",
             },
           }}
         >
@@ -28,7 +28,7 @@ export const Header = () => {
           slotProps={{
             badge: {
               className:
-                "h-3 w-3 bottom-1.5 right-1.5 min-w-0 content-between  bg-[#BD2020] p-0.5 text-[8px] leading-tight text-white",
+                "h-3 w-3 bottom-1.5 right-1.5 min-w-0  bg-[#BD2020] p-0.5 text-[8px] leading-tight text-white",
             },
           }}
         >

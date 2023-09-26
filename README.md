@@ -8,7 +8,7 @@
 - [✔️] Configure MUI-tailwind interoperability.
 - [✔️] Dump initial content into page as big raw content.
 - [✔️] Use MUI components and adapt them with tailwind (No theming, direct modifications from figma).
-- [❌] Re-usable components.
+- [✔️] Re-usable components and layouts.
 - [❌] Install Zustand.
 - [❌] Generate fake json and types.
 - [❌] Break down zustand stores into data structure and interactivity flow (data, loading state).
