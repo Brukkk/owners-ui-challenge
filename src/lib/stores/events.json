@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Interior & Exterior paint",
+    "date": "01 Jan 2023",
+    "rangeHour": ["09:30", "13:45"],
+    "client": "Juan Perez",
+    "subcontractors": [
+      {
+        "name": "Carlos Rodriguez",
+        "rating": 2.5
+      }
+    ]
+  },
+  {
+    "name": "Plumbing Repair",
+    "date": "02 Jan 2023",
+    "rangeHour": ["14:00", "17:00"],
+    "client": "Maria Hernandez",
+    "subcontractors": [
+      {
+        "name": "Carlos Rodriguez",
+        "rating": 2.5
+      }
+    ]
+  },
+  {
+    "name": "Gardening Service",
+    "date": "02 Jan 2023",
+    "rangeHour": ["17:30", "19:00"],
+    "client": "Carlos Rodriguez",
+    "subcontractors": [
+      {
+        "name": "Carlos Rodriguez",
+        "rating": 2.5
+      }
+    ]
+  },
+  {
+    "name": "Electrical Installation",
+    "date": "04 Jan 2023",
+    "rangeHour": ["08:00", "11:00"],
+    "client": "Luis Gonzalez",
+    "subcontractors": [
+      {
+        "name": "Carlos Rodriguez",
+        "rating": 2.5
+      }
+    ]
+  },
+  {
+    "name": "Roof Repair",
+    "date": "05 Jan 2023",
+    "rangeHour": ["13:00", "16:00"],
+    "client": "Ana Torres",
+    "subcontractors": [
+      {
+        "name": "Carlos Rodriguez",
+        "rating": 2.5
+      }
+    ]
+  },
+  {
+    "name": "AC Maintenance",
+    "date": "06 Jan 2023",
+    "rangeHour": ["09:00", "12:00"],
+    "client": "Pedro Ramirez",
+    "subcontractors": [
+      {
+        "name": "Carlos Rodriguez",
+        "rating": 2.5
+      }
+    ]
+  },
+  {
+    "name": "Flooring Installation",
+    "date": "07 Jan 2023",
+    "rangeHour": ["14:00", "17:00"],
+    "client": "Sofia Lopez",
+    "subcontractors": [
+      {
+        "name": "Carlos Rodriguez",
+        "rating": 2.5
+      }
+    ]
+  },
+  {
+    "name": "Furniture Assembly",
+    "date": "08 Jan 2023",
+    "rangeHour": ["10:00", "13:00"],
+    "client": "Diego Castro",
+    "subcontractors": [
+      {
+        "name": "Carlos Rodriguez",
+        "rating": 2.5
+      }
+    ]
+  },
+  {
+    "name": "Appliance Repair",
+    "date": "09 Jan 2023",
+    "rangeHour": ["08:00", "11:00"],
+    "client": "Laura Diaz",
+    "subcontractors": [
+      {
+        "name": "Carlos Rodriguez",
+        "rating": 2.5
+      }
+    ]
+  },
+  {
+    "name": "Carpentry Service",
+    "date": "10 Jan 2023",
+    "rangeHour": ["13:00", "16:00"],
+    "client": "Javier Vargas",
+    "subcontractors": [
+      {
+        "name": "Carlos Rodriguez",
+        "rating": 2.5
+      }
+    ]
+  }
+]
