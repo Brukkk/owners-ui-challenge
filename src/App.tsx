@@ -8,7 +8,7 @@ function App() {
     <>
       <div className=" mx-auto max-w-[428px] bg-[#F7F9FB]">
         <Header />
-        <main className=" h-[600vh] px-8 pt-5">
+        <main className=" h-[600vh] overflow-x-hidden px-8 pt-5">
           <MotivationSection />
           <OrderSection />
           <GrowthSection />
