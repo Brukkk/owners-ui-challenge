@@ -3,7 +3,7 @@ import { EventCard } from "../components/EventCard";
 import { useEvent } from "../lib/stores/useEvent";
 
 export const OrderSection = () => {
-  const { events, loading } = useEvent();
+  const { events } = useEvent();
   return (
     <section id="order" className=" mb-8">
       <div className="mb-5 flex items-center justify-between text-[#304985]">
@@ -17,15 +17,11 @@ export const OrderSection = () => {
           Ver calendario
         </Button>
       </div>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <div className=" flex flex-row gap-16">
-          {events.map((event) => (
-            <EventCard key={event.date + event.rangeHour[0]} {...event} />
-          ))}
-        </div>
-      )}
+      <div className=" flex flex-row gap-16">
+        {events.map((event) => (
+          <EventCard key={event.date + event.rangeHour} {...event} />
+        ))}
+      </div>
     </section>
   );
 };
