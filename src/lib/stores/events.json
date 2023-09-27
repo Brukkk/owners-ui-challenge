@@ -12,6 +12,18 @@
     ]
   },
   {
+    "name": "Interior paint",
+    "date": "02 Jan 2023",
+    "rangeHour": ["09:30", "13:45"],
+    "client": "Juan Perez",
+    "subcontractors": [
+      {
+        "name": "Carlos Rodriguez",
+        "rating": 2.5
+      }
+    ]
+  },
+  {
     "name": "Plumbing Repair",
     "date": "02 Jan 2023",
     "rangeHour": ["14:00", "17:00"],

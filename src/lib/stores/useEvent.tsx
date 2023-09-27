@@ -29,10 +29,15 @@ const removeEvent = (
   events: Event[],
   date: string,
   rangeHour: string[],
-): Event[] =>
-  events.filter(
-    (event) => event.date !== date && event.rangeHour !== rangeHour,
+): Event[] => {
+  console.log(date, rangeHour);
+  return events.filter(
+    (event) =>
+      event.date !== date ||
+      event.rangeHour[0] !== rangeHour[0] ||
+      event.rangeHour[1] !== rangeHour[1],
   );
+};
 
 export const useEvent = create<EventStore>((set) => ({
   events: eventData,

@@ -10,11 +10,11 @@
 - [✔️] Use MUI components and adapt them with tailwind (No theming, direct modifications from figma).
 - [✔️] Re-usable components and layouts.
 - [✔️] Install Zustand.
-- [✔️] Generate fake json and types.
-- [✔️] Break down zustand stores into data structure and interactivity flow (data, loading state).
+- [✔️] Generate fake json and types for Events.
+- [✔️] Break down zustand stores into data structure and interactivity flow (data, setters).
 - [❌] Configure Events and Tasks stores with fake json data.
-- [❌] Fallback skeleton will information is loading (MUI skeleton) .
 - [❌] Install Framer Motion and create animations while components mount and exit.
+- [❌] Do the same for Tasks.
 
 ## Bonus
 
