@@ -1,9 +1,11 @@
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
+import { useState } from "react";
 import { formatTime } from "../lib/helpers";
 import { useEvent } from "../lib/stores/useEvent";
 import { Event } from "../lib/types/Event";
+import { BasicModal } from "./BasicModal";
 import { SubcontratistCard } from "./SubcontratistCard";
 
 export const EventCard = ({
@@ -14,9 +16,22 @@ export const EventCard = ({
   subcontractors,
 }: Event) => {
   const { removeEvent } = useEvent();
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const handleRemove = () => {
+    handleClose();
+    // Delay simulation for Fade transition on Modal to unmount
+    setTimeout(() => {
+      removeEvent(date, rangeHour);
+    }, 500);
+  };
   const month = date.split(" ")[1];
   const dayNumber = date.split(" ")[0];
   const year = date.split(" ")[2];
+
   return (
     <div className=" min-w-[324px] rounded-xl bg-white p-5 shadow-[0_1px_4px_0px_rgba(0,0,0,0.25)]">
       <div className="mb-2.5 flex items-start justify-between">
@@ -51,12 +66,40 @@ export const EventCard = ({
       </div>
       <div className="mt-6 flex justify-between">
         <Button
-          onClick={() => removeEvent(date, rangeHour)}
+          onClick={handleOpen}
           variant="text"
           className="min-w-[150px] rounded-lg bg-[#E6EEFE] p-4 text-sm  font-semibold leading-tight text-[#304985]"
         >
           Cancelar
         </Button>
+        <BasicModal open={open} onClose={handleClose}>
+          <>
+            <p id="modal-modal-title">¿Estás seguro?</p>
+            <p
+              id="modal-modal-description"
+              className="mt-2 text-[#454545] text-opacity-60"
+            >
+              Una vez eliminado el evento, no hay vuelta atrás.
+            </p>
+            <div className="mt-4 flex justify-end gap-4">
+              <Button
+                onClick={handleClose}
+                variant="text"
+                className=" rounded-lg bg-[#E6EEFE]  text-sm  font-semibold text-[#304985]"
+              >
+                Cancelar
+              </Button>
+              <Button
+                variant="contained"
+                //color="error"
+                className=" rounded-lg  bg-[#BD2020]"
+                onClick={handleRemove}
+              >
+                Eliminar
+              </Button>
+            </div>
+          </>
+        </BasicModal>
         <Button
           variant="contained"
           className=" rounded-lg bg-[#304985] p-4 leading-tight"
