@@ -1,6 +1,7 @@
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { formatTime } from "../lib/helpers";
 import { useEvent } from "../lib/stores/useEvent";
@@ -33,7 +34,14 @@ export const EventCard = ({
   const year = date.split(" ")[2];
 
   return (
-    <div className=" min-w-[324px] rounded-xl bg-white p-5 shadow-[0_1px_4px_0px_rgba(0,0,0,0.25)]">
+    <motion.div
+      key={date + rangeHour[0] + rangeHour[1]} // This key is necessary for Framer Motion to know witch component should be calculated outside the DOM
+      initial={{ opacity: 0, x: "120%" }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ x: "-120%" }}
+      transition={{ duration: 1 }} // You can play with the duration and watch the in the DOM tree how are both
+      className=" absolute  left-0 right-0 top-0 rounded-xl bg-white p-5 shadow-[0_1px_4px_0px_rgba(0,0,0,0.25)]"
+    >
       <div className="mb-2.5 flex items-start justify-between">
         <div className="flex gap-4">
           <div className=" space-y-2 text-right text-sm font-medium leading-tight text-neutral-600 text-opacity-60">
@@ -59,7 +67,7 @@ export const EventCard = ({
         <MoreVertIcon className="h-6 w-6 cursor-pointer text-[#304985]" />
       </div>
       <p className="mb-1 text-xs text-[#454545]">Sub contratista/s:</p>
-      <div className="flex snap-x gap-8 overflow-x-auto pb-2">
+      <div className="flex snap-x snap-proximity gap-8 overflow-x-auto pb-2">
         {subcontractors.map(({ name, rating }, i) => (
           <SubcontratistCard key={i} name={name} rating={rating} />
         ))}
@@ -68,13 +76,15 @@ export const EventCard = ({
         <Button
           onClick={handleOpen}
           variant="text"
-          className="min-w-[150px] rounded-lg bg-[#E6EEFE] p-4 text-sm  font-semibold leading-tight text-[#304985]"
+          className="rounded-lg bg-[#E6EEFE] p-4 text-sm font-semibold  leading-tight text-[#304985] min-[375px]:px-8"
         >
           Cancelar
         </Button>
         <BasicModal open={open} onClose={handleClose}>
           <>
-            <p id="modal-modal-title">¿Estás seguro?</p>
+            <p className=" font-semibold" id="modal-modal-title">
+              ¿Estás seguro?
+            </p>
             <p
               id="modal-modal-description"
               className="mt-2 text-[#454545] text-opacity-60"
@@ -107,6 +117,6 @@ export const EventCard = ({
           Reprogramar
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 };

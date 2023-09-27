@@ -1,11 +1,18 @@
 import Button from "@mui/material/Button";
+import { AnimatePresence, motion } from "framer-motion";
 import { EventCard } from "../components/EventCard";
 import { useEvent } from "../lib/stores/useEvent";
 
 export const OrderSection = () => {
   const { events } = useEvent();
   return (
-    <section id="order" className=" mb-8">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="order"
+      className=" mb-8"
+    >
       <div className="mb-5 flex items-center justify-between text-[#304985]">
         <h2 className=" leading-1 inline-block text-lg font-semibold leading-tight ">
           Próximos eventos
@@ -17,11 +24,20 @@ export const OrderSection = () => {
           Ver calendario
         </Button>
       </div>
-      <div className=" flex flex-row gap-16">
-        {events.map((event) => (
-          <EventCard key={event.date + event.rangeHour} {...event} />
-        ))}
-      </div>
-    </section>
+      <motion.div
+        layout
+        className="relative flex h-72 w-full flex-row gap-16 min-[375px]:h-[262px]"
+      >
+        <AnimatePresence>
+          {/* Only render the first event in our store and let Framer Motion deal when the component mount and unmount */}
+          <EventCard
+            key={
+              events[0].date + events[0].rangeHour[0] + events[0].rangeHour[1]
+            }
+            {...events[0]}
+          />
+        </AnimatePresence>
+      </motion.div>
+    </motion.section>
   );
 };

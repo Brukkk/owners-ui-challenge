@@ -1,9 +1,16 @@
 import Button from "@mui/material/Button";
+import { motion } from "framer-motion";
 import { TaskCard } from "../components/TaskCard";
 
 export const GrowthSection = () => {
   return (
-    <section id="growth" className="mb-8">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="growth"
+      className="mb-8"
+    >
       <div className="mb-5 flex items-center justify-between text-[#304985]">
         <h2 className=" leading-1 inline-block text-lg font-semibold leading-tight ">
           Tareas por completar
@@ -21,6 +28,6 @@ export const GrowthSection = () => {
           <TaskCard key={i} />
         ))}
       </ul>
-    </section>
+    </motion.section>
   );
 };

@@ -12,8 +12,8 @@
 - [✔️] Install Zustand.
 - [✔️] Generate fake json and types for Events.
 - [✔️] Break down zustand stores into data structure and interactivity flow (data, setters).
-- [❌] Configure Events and Tasks stores with fake json data.
-- [❌] Install Framer Motion and create animations while components mount and exit.
+- [✔️] Configure Events stores with fake json data.
+- [✔️] Install Framer Motion and create animations while components mount and exit.
 - [❌] Do the same for Tasks.
 
 ## Bonus
