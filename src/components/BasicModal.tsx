@@ -15,7 +15,7 @@ export const BasicModal = ({
       closeAfterTransition
     >
       <Fade in={open}>
-        <div className="absolute left-[50%] top-[50%] w-80 translate-x-[-50%] translate-y-[-50%] rounded-xl bg-[#F7F9FB] p-6 text-[#304985] shadow-2xl">
+        <div className="absolute left-[50%] top-[50%] w-[75%] max-w-xs translate-x-[-50%] translate-y-[-50%] rounded-xl bg-[#F7F9FB] p-6 text-[#304985] shadow-2xl">
           {children}
         </div>
       </Fade>
