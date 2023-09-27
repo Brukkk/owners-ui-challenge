@@ -39,7 +39,12 @@ export const EventCard = ({
       initial={{ opacity: 0, x: "120%" }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ x: "-120%" }}
-      transition={{ duration: 1 }} // You can play with the duration and watch the in the DOM tree how are both
+      transition={{
+        type: "spring",
+        stiffness: 175,
+        damping: 20,
+        mass: 1.5,
+      }}
       className=" absolute  left-0 right-0 top-0 rounded-xl bg-white p-5 shadow-[0_1px_4px_0px_rgba(0,0,0,0.25)]"
     >
       <div className="mb-2.5 flex items-start justify-between">
