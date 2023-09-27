@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
-}
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
