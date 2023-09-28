@@ -8,7 +8,14 @@ import { motion } from "framer-motion";
 import { chooseAvatar } from "../lib/helpers";
 import { Task } from "../lib/types/Task";
 
-export const TaskCard = ({ name, dueDate, sector, stakeholders }: Task) => {
+export const TaskCard = ({
+  name,
+  dueDate,
+  sector,
+  stakeholders,
+  commentQuantity,
+  fileQuantity,
+}: Task) => {
   return (
     <motion.li
       layoutId={`${name}${dueDate}`}
@@ -39,9 +46,9 @@ export const TaskCard = ({ name, dueDate, sector, stakeholders }: Task) => {
         </AvatarGroup>
         <div className="flex gap-1">
           <ChatBubbleOutlineIcon className=" w-5" />
-          <span>3</span>
+          <span>{commentQuantity}</span>
           <AttachFileIcon className=" w-5" />
-          <span>3</span>
+          <span>{fileQuantity}</span>
         </div>
       </div>
     </motion.li>

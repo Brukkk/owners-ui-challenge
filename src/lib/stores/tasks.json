@@ -3,7 +3,9 @@
     "name": "Pick a framework",
     "dueDate": "December 15, 2022",
     "sector": "Technology",
-    "stakeholders": ["Maria Rodriguez", "Juan Perez"]
+    "stakeholders": ["Maria Rodriguez", "Juan Perez"],
+    "commentQuantity": 7,
+    "fileQuantity": 3
   },
   {
     "name": "Choose a logo",
@@ -15,13 +17,17 @@
       "Sofia Gonzalez",
       "Carlos Ramirez",
       "Stakeholder 1"
-    ]
+    ],
+    "commentQuantity": 4,
+    "fileQuantity": 2
   },
   {
     "name": "Create a marketing strategy",
     "dueDate": "February 5, 2023",
     "sector": "Marketing",
-    "stakeholders": ["Maria Rodriguez", "Juan Perez", "Stakeholder 1"]
+    "stakeholders": ["Maria Rodriguez", "Juan Perez", "Stakeholder 1"],
+    "commentQuantity": 6,
+    "fileQuantity": 1
   },
   {
     "name": "Define the target audience",
@@ -33,13 +39,17 @@
       "Stakeholder 1",
       "Stakeholder 2",
       "Stakeholder 3"
-    ]
+    ],
+    "commentQuantity": 9,
+    "fileQuantity": 4
   },
   {
     "name": "Set up financial accounts",
     "dueDate": "April 20, 2023",
     "sector": "Finance",
-    "stakeholders": ["Gabriel Fernandez", "Valeria Torres", "Stakeholder 1"]
+    "stakeholders": ["Gabriel Fernandez", "Valeria Torres", "Stakeholder 1"],
+    "commentQuantity": 5,
+    "fileQuantity": 2
   },
   {
     "name": "Develop a website",
@@ -50,13 +60,17 @@
       "Natalia Silva",
       "Stakeholder 1",
       "Stakeholder 2"
-    ]
+    ],
+    "commentQuantity": 6,
+    "fileQuantity": 3
   },
   {
     "name": "Create a branding strategy",
     "dueDate": "June 10, 2023",
     "sector": "Marketing",
-    "stakeholders": ["Roberto Vargas", "Camila Morales", "Stakeholder 1"]
+    "stakeholders": ["Roberto Vargas", "Camila Morales", "Stakeholder 1"],
+    "commentQuantity": 4,
+    "fileQuantity": 1
   },
   {
     "name": "Hire an accountant",
@@ -68,13 +82,17 @@
       "Stakeholder 1",
       "Stakeholder 2",
       "Stakeholder 3"
-    ]
+    ],
+    "commentQuantity": 7,
+    "fileQuantity": 2
   },
   {
     "name": "Design business cards",
     "dueDate": "August 1, 2023",
     "sector": "Design",
-    "stakeholders": ["Fernanda Ramirez", "Sebastian Castro", "Stakeholder 1"]
+    "stakeholders": ["Fernanda Ramirez", "Sebastian Castro", "Stakeholder 1"],
+    "commentQuantity": 3,
+    "fileQuantity": 1
   },
   {
     "name": "Implement social media marketing",
@@ -85,6 +103,8 @@
       "Victoria Garcia",
       "Stakeholder 1",
       "Stakeholder 2"
-    ]
+    ],
+    "commentQuantity": 5,
+    "fileQuantity": 2
   }
 ]
