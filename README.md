@@ -33,3 +33,5 @@
 4. I had trouble and lack of understanding in the react component life-cicle when trying to mount async zustand's store and manage a loading state. One way I could improve is trying with next js and setting an API although the state manager wouldn't be needed in that case.
 
 5. Some animations weren't as precise as I would like them to see and I already have a great passion for Framer Motion. Maybe for not so complex animations It would be nice to learn a lighter weight library.
+
+6. Some semantic HTML is never bad for FE Developers and could it be improved and a couple of reusable components I miss in the run like the Title + action or the Icon + Badge.
