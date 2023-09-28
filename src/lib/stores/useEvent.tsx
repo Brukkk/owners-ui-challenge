@@ -4,26 +4,10 @@ import eventData from "./events.json";
 
 interface EventStore {
   events: Event[];
-  loading: boolean;
-  setEvents: () => void;
-  updateEvent: (date: string, hourRange: string[]) => void;
+  //loading: boolean;
+  //setEvents: () => void;
   removeEvent: (date: string, hourRange: string[]) => void;
 }
-
-const updateEvent = (
-  events: Event[],
-  date: string,
-  rangeHour: string[],
-): Event[] =>
-  events.map((event) => ({
-    ...event,
-    date:
-      event.date === date && event.rangeHour === rangeHour ? date : event.date,
-    rangeHour:
-      event.rangeHour === rangeHour && event.date === date
-        ? rangeHour
-        : event.rangeHour,
-  }));
 
 const removeEvent = (
   events: Event[],
@@ -41,7 +25,9 @@ const removeEvent = (
 
 export const useEvent = create<EventStore>((set) => ({
   events: eventData,
-  loading: false,
+  // Tried to setup up an async load state to fetch the data on component mount but had a few trouble trying to debug it
+  // loading: false,
+  /*
   setEvents: async () => {
     console.log("Loading...");
     set({ loading: true });
@@ -49,11 +35,7 @@ export const useEvent = create<EventStore>((set) => ({
     console.log("Finished loading");
     set((state) => ({ ...state, events: eventData, loading: false }));
   },
-  updateEvent: (date: string, rangeHour: string[]) =>
-    set((state) => ({
-      ...state,
-      events: updateEvent(state.events, date, rangeHour),
-    })),
+  */
   removeEvent: (date: string, rangeHour: string[]) =>
     set((state) => ({
       ...state,

@@ -30,15 +30,14 @@ export const OrderSection = () => {
       >
         <AnimatePresence>
           {/* Only render the first event in our store and let Framer Motion deal when the component mount and unmount */}
-          {events.length > 0 && (
+          {events.length > 0 ? (
             <EventCard
               key={
                 events[0].date + events[0].rangeHour[0] + events[0].rangeHour[1]
               }
               {...events[0]}
             />
-          )}
-          {events.length === 0 && (
+          ) : (
             <p className="text-xl font-medium text-[#304985] opacity-80">
               No more events
             </p>

@@ -11,10 +11,10 @@ import { Task } from "../lib/types/Task";
 export const TaskCard = ({ name, dueDate, sector, stakeholders }: Task) => {
   return (
     <motion.li
-      layoutId={name + dueDate}
-      initial={{ y: 20, opacity: 0.4 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ x: "-200%", opacity: 0 }}
+      layoutId={`${name}${dueDate}`}
+      initial={{ x: 100, scale: 0 }}
+      animate={{ x: 0, scale: 1 }}
+      exit={{ x: "-200%" }}
       className="list-none rounded-xl bg-white p-4 font-semibold text-[#454545] shadow-[0_1px_4px_0px_rgba(0,0,0,0.25)]"
     >
       <div className="flex justify-between">

@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import AvatarCarlos from "../assets/AvatarCarlos.png";
 import { formatTime } from "../lib/helpers";
 import { useEvent } from "../lib/stores/useEvent";
 import { Event } from "../lib/types/Event";
@@ -22,16 +23,15 @@ export const EventCard = ({
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const handleRemove = () => {
+  const delay = (ms: number) =>
+    new Promise((resolve) => setTimeout(resolve, ms));
+
+  const handleRemove = async () => {
     handleClose();
-    // Delay simulation for Fade transition on Modal to unmount
-    setTimeout(() => {
-      removeEvent(date, rangeHour);
-    }, 500);
+    await delay(150);
+    removeEvent(date, rangeHour);
   };
-  const month = date.split(" ")[1];
-  const dayNumber = date.split(" ")[0];
-  const year = date.split(" ")[2];
+  const [dayNumber, month, year] = date.split(" ");
 
   return (
     <motion.div
@@ -73,8 +73,13 @@ export const EventCard = ({
       </div>
       <p className="mb-1 text-xs text-[#454545]">Sub contratista/s:</p>
       <div className="flex snap-x snap-proximity gap-8 overflow-x-auto pb-2">
-        {subcontractors.map(({ name, rating }, i) => (
-          <SubcontratistCard key={i} name={name} rating={rating} />
+        {subcontractors.map(({ name, rating }) => (
+          <SubcontratistCard
+            key={name}
+            avatar={AvatarCarlos}
+            name={name}
+            rating={rating}
+          />
         ))}
       </div>
       <div className="mt-6 flex justify-between">
@@ -85,7 +90,7 @@ export const EventCard = ({
         >
           Cancelar
         </Button>
-        <BasicModal open={open} onClose={handleClose}>
+        <BasicModal open={open} handleClose={handleClose}>
           <>
             <p className=" font-semibold" id="modal-modal-title">
               ¿Estás seguro?

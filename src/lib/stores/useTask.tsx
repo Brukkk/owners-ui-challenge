@@ -26,7 +26,12 @@ export const useTask = create<TaskStore>((set) => ({
   toggleAllViews: () =>
     set((state) => ({
       ...state,
-      taskView: state.allTasks ? state.previousView : state.tasks.length,
+      taskView:
+        state.allTasks && state.previousView >= state.tasks.length / 2
+          ? 3 // If too much items in the view, reset to the first 3.
+          : state.allTasks
+          ? state.previousView // If the previous state was true, go back to the last previous view
+          : state.tasks.length, // show all the tasks
       allTasks: !state.allTasks,
     })),
 }));

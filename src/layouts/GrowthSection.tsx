@@ -9,11 +9,13 @@ import { useTask } from "../lib/stores/useTask";
 const MORE_TASKS_NUMB = 2;
 
 const container = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, x: 100 },
   show: {
     opacity: 1,
+    x: 0,
     transition: {
-      staggerChildren: 0.5,
+      delayChildren: 0.1,
+      staggerChildren: 1,
     },
   },
 };
@@ -21,6 +23,7 @@ const container = {
 export const GrowthSection = () => {
   const { tasks, taskView, allTasks, setView, toggleAllViews } = useTask();
   const ref = useRef<null | HTMLButtonElement>(null);
+  const slicedTasks = tasks.slice(0, taskView);
 
   const handleMoreViews = () => {
     setView(MORE_TASKS_NUMB);
@@ -32,7 +35,8 @@ export const GrowthSection = () => {
   };
 
   const handleAllViews = () => {
-    if (!allTasks) {
+    if (!allTasks && taskView < tasks.length) {
+      // [BUG] When reaching the bottom without clicking "View all" button, you need to click twice. Maybe due to the setters
       setTimeout(() => {
         ref.current?.scrollIntoView({
           behavior: "smooth",
@@ -60,13 +64,18 @@ export const GrowthSection = () => {
           variant="text"
           className=" py-1 text-sm font-semibold normal-case leading-none tracking-normal text-[#304985] "
         >
-          Ver {allTasks ? "menos" : "todas"}
+          Ver {allTasks || taskView >= tasks.length ? "menos" : "todas"}
         </Button>
       </div>
       {/*TAREAS*/}
-      <motion.ul variants={container} className="space-y-4">
+      <motion.ul
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="space-y-4"
+      >
         <AnimatePresence>
-          {tasks.slice(0, taskView).map((task) => (
+          {slicedTasks.map((task) => (
             <TaskCard key={task.name + task.dueDate} {...task} />
           ))}
         </AnimatePresence>

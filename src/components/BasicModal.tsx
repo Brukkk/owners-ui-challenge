@@ -1,11 +1,10 @@
 import Fade from "@mui/material/Fade";
 import Modal, { ModalOwnProps } from "@mui/material/Modal";
 
-export const BasicModal = ({
-  open,
-  onClose: handleClose,
-  children,
-}: ModalOwnProps) => {
+interface ModalProps extends ModalOwnProps {
+  handleClose: () => void;
+}
+export const BasicModal = ({ open, handleClose, children }: ModalProps) => {
   return (
     <Modal
       open={open}
