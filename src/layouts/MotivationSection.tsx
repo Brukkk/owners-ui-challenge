@@ -6,7 +6,7 @@ export const MotivationSection = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.4 }}
       id="motivation"
     >
       <h1 className=" mb-2.5 text-xl font-semibold text-[#304985] ">

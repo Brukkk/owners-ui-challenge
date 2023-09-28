@@ -41,9 +41,9 @@ export const EventCard = ({
       exit={{ x: "-120%" }}
       transition={{
         type: "spring",
-        stiffness: 175,
-        damping: 20,
-        mass: 1.5,
+        stiffness: 75,
+        damping: 5,
+        mass: 0.3,
       }}
       className=" absolute  left-0 right-0 top-0 rounded-xl bg-white p-5 shadow-[0_1px_4px_0px_rgba(0,0,0,0.25)]"
     >
