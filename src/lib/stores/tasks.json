@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Pick a framework",
+    "dueDate": "December 15, 2022",
+    "sector": "Technology",
+    "stakeholders": ["Maria Rodriguez", "Juan Perez"]
+  },
+  {
+    "name": "Choose a logo",
+    "dueDate": "January 10, 2023",
+    "sector": "Design",
+    "stakeholders": [
+      "Maria Rodriguez",
+      "Juan Perez",
+      "Sofia Gonzalez",
+      "Carlos Ramirez",
+      "Stakeholder 1"
+    ]
+  },
+  {
+    "name": "Create a marketing strategy",
+    "dueDate": "February 5, 2023",
+    "sector": "Marketing",
+    "stakeholders": ["Maria Rodriguez", "Juan Perez", "Stakeholder 1"]
+  },
+  {
+    "name": "Define the target audience",
+    "dueDate": "March 1, 2023",
+    "sector": "Marketing",
+    "stakeholders": [
+      "Diego Martinez",
+      "Laura Castro",
+      "Stakeholder 1",
+      "Stakeholder 2",
+      "Stakeholder 3"
+    ]
+  },
+  {
+    "name": "Set up financial accounts",
+    "dueDate": "April 20, 2023",
+    "sector": "Finance",
+    "stakeholders": ["Gabriel Fernandez", "Valeria Torres", "Stakeholder 1"]
+  },
+  {
+    "name": "Develop a website",
+    "dueDate": "May 15, 2023",
+    "sector": "Technology",
+    "stakeholders": [
+      "Julio Gomez",
+      "Natalia Silva",
+      "Stakeholder 1",
+      "Stakeholder 2"
+    ]
+  },
+  {
+    "name": "Create a branding strategy",
+    "dueDate": "June 10, 2023",
+    "sector": "Marketing",
+    "stakeholders": ["Roberto Vargas", "Camila Morales", "Stakeholder 1"]
+  },
+  {
+    "name": "Hire an accountant",
+    "dueDate": "July 5, 2023",
+    "sector": "Finance",
+    "stakeholders": [
+      "Daniel Lopez",
+      "Carolina Perez",
+      "Stakeholder 1",
+      "Stakeholder 2",
+      "Stakeholder 3"
+    ]
+  },
+  {
+    "name": "Design business cards",
+    "dueDate": "August 1, 2023",
+    "sector": "Design",
+    "stakeholders": ["Fernanda Ramirez", "Sebastian Castro", "Stakeholder 1"]
+  },
+  {
+    "name": "Implement social media marketing",
+    "dueDate": "September 20, 2023",
+    "sector": "Marketing",
+    "stakeholders": [
+      "Andres Torres",
+      "Victoria Garcia",
+      "Stakeholder 1",
+      "Stakeholder 2"
+    ]
+  }
+]

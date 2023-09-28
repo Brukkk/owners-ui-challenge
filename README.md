@@ -14,12 +14,13 @@
 - [✔️] Break down zustand stores into data structure and interactivity flow (data, setters).
 - [✔️] Configure Events stores with fake json data.
 - [✔️] Install Framer Motion and create animations while components mount and exit.
-- [❌] Do the same for Tasks.
+- [✔️] Do the same for Tasks.
 
 ## Bonus
 
 - [❌] Zustand Calendar interactivity
-- [❌] Zustand Tasks interactivity
+- [✔️] Zustand Cancel interactivity
+- [✔️] Zustand Tasks interactivity
 
 ### UX Communication & UI proposals
 
